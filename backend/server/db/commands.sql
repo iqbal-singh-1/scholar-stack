@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    login_type TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS uploads (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT NOT NULL,
+    file_type TEXT NOT NULL,
+    file_size INTEGER NOT NULL,
+    upload_date TEXT DEFAULT CURRENT_TIMESTAMP
+);
